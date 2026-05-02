@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doom-like Raycaster (Canvas)</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main id="app">
+      <canvas id="game" width="960" height="540" aria-label="Game canvas"></canvas>
+
+      <div id="hud" aria-hidden="true">
+        <div class="hud-row">
+          <div class="hud-box"><span class="lbl">HP</span> <span id="hp">100</span></div>
+          <div class="hud-box"><span class="lbl">AMMO</span> <span id="ammo">50</span></div>
+          <div class="hud-box"><span class="lbl">LEVEL</span> <span id="level">1</span></div>
+          <div class="hud-box"><span class="lbl">$$</span> <span id="money">0</span></div>
+        </div>
+        <div id="hint" class="hint">WASD — рух • Миша — огляд • ЛКМ — постріл • ESC — меню</div>
+      </div>
+
+      <div id="overlay" class="overlay">
+        <div class="panel">
+          <h1>DOOM‑like (1993) — Raycasting Demo</h1>
+          <p>
+            Натисни <b>ЛКМ</b>, щоб почати (ввімкнеться pointer lock). WASD — рух, миша — огляд, ЛКМ — постріл.
+          </p>
+          <div class="row">
+            <button id="startBtn" type="button">Start</button>
+            <button id="resumeBtn" type="button" class="secondary" hidden>Resume</button>
+          </div>
+          <small class="muted">
+            Порада: якщо браузер блокує звук — клікни Start ще раз після початку.
+          </small>
+        </div>
+      </div>
+
+      <canvas id="minimap" width="220" height="220" aria-label="Minimap"></canvas>
+    </main>
+
+    <script defer src="./main.js"></script>
+  </body>
+</html>
